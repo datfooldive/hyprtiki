@@ -29,9 +29,9 @@ static void dataCallback(ma_device *pDevice, void *pOutput, const void *pInput,
     ma_uint64 got = 0;
     ma_decoder_read_pcm_frames(decoder, pOut + read * bpf, frameCount - read,
                                &got);
-    read += got;
     if (got < (frameCount - read))
       ma_decoder_seek_to_pcm_frame(decoder, 0);
+    read += got;
     if (got == 0)
       break;
   }
