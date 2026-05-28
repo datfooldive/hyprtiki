@@ -1,0 +1,4 @@
+.cache/
+build/
+compile_commands.json
+src/music_data.h
